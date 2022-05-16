@@ -27,9 +27,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 public class JAdminUpdate extends javax.swing.JFrame {
-        private static String DB_URL = "jdbc:mysql://localhost:3306/qltv";
-        private static String USER_NAME = "root";
-        private static String PASSWORD = "123456";
+        private static String DB_URL = "jdbc:mysql://remotemysql.com:3306/2rWhqjDygH";
+        private static String USER_NAME = "2rWhqjDygH";
+        private static String PASSWORD = "quNIX26vtf";
         SachData sachdata = new SachData();
         KhachHangData khachhangdata = new KhachHangData();
         PhieuMuonData phieumuondata = new PhieuMuonData();
@@ -127,9 +127,9 @@ public class JAdminUpdate extends javax.swing.JFrame {
                 try {
                         Connection con = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
                         Statement stm = con.createStatement();
-                        ResultSet rs = stm.executeQuery("SELECT * FROM Sach");
+                        ResultSet rs = stm.executeQuery("SELECT * FROM SACH");
                         while (rs.next()) {
-                                String masach = rs.getString("Ma_sach");
+                                String masach = rs.getString("Ma_Sach");
                                 cbSachMuon.addItem(masach);
                         }
                 } catch (SQLException ex) {
