@@ -18,7 +18,7 @@ import net.proteanit.sql.DbUtils;
 
 public class ThongKe extends javax.swing.JFrame {
 
-    public static String sql = "SELECT * FROM PHIEU_MUON where Han_tra < (select GETDATE())";
+    public static String sql = "SELECT * FROM PHIEU_MUON where Han_tra < (select CURDATE())";
 
     public JTextArea getTa() {
         return taBaoCao;
@@ -38,7 +38,7 @@ public class ThongKe extends javax.swing.JFrame {
             String sql2 = "SELECT COUNT(Ma_Khach_hang) as khachhang FROM KHACH_HANG";
             String sql3 = "SELECT COUNT(Ma_Phieu_muon) as phieumuon FROM PHIEU_MUON";
             String sql4 = "SELECT COUNT(DISTINCT Ma_Khach_hang) as khachmuon FROM PHIEU_MUON";
-            String sql5 = "SELECT COUNT(Ma_Phieu_muon) as phieumuon FROM PHIEU_MUON where (Han_tra < (select GETDATE()) and NgayTra IS NULL)";
+            String sql5 = "SELECT COUNT(Ma_Phieu_muon) as phieumuon FROM PHIEU_MUON where (Han_tra < (select CURDATE()) and NgayTra IS NULL)";
             ResultSet rs1 = UpdateTable.ShowTextField(sql1);
             ResultSet rs2 = UpdateTable.ShowTextField(sql2);
             ResultSet rs3 = UpdateTable.ShowTextField(sql3);
