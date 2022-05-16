@@ -14,7 +14,7 @@ public class Connect {
 
     public static Connection getConnect() {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(
                     "jdbc:sqlserver://bfdyllagpx9xmspozzom-mysql.services.clever-cloud.com;databaseName=bfdyllagpx9xmspozzom;Username=uihxw415jvbmmula;Password = yen6f9KlpbvG7Pr7Zcy2");
 
