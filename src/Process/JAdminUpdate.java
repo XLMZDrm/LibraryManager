@@ -27,9 +27,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 public class JAdminUpdate extends javax.swing.JFrame {
-        private static String DB_URL = "jdbc:mysql://remotemysql.com:3306/2rWhqjDygH";
-        private static String USER_NAME = "2rWhqjDygH";
-        private static String PASSWORD = "quNIX26vtf";
+        private static String DB_URL = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6492801";
+        private static String USER_NAME = "sql6492801";
+        private static String PASSWORD = "nM1BVn6uQA";
         SachData sachdata = new SachData();
         KhachHangData khachhangdata = new KhachHangData();
         PhieuMuonData phieumuondata = new PhieuMuonData();

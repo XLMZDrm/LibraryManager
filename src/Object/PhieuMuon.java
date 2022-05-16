@@ -15,6 +15,12 @@ public class PhieuMuon {
     private Date hanTra;
     private Date ngayTra;
 
+    @Override
+    public String toString() {
+        return "PhieuMuon [hanTra=" + hanTra + ", maKhach=" + maKhach + ", maMuon=" + maMuon + ", maSach=" + maSach
+                + ", ngayMuon=" + ngayMuon + ", ngayTra=" + ngayTra + "]";
+    }
+
     // private int tienCoc;
     public PhieuMuon() {
 

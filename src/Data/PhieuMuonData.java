@@ -27,6 +27,7 @@ public class PhieuMuonData {
     public static void InsertPhieu(PhieuMuon p) {
         String sql = "insert into PHIEU_MUON values(?,?,?,?,?,?)";
         try {
+            System.out.println(p.toString());
             ps = Connect.getConnect().prepareStatement(sql);
             ps.setString(1, p.getMaMuon());
             ps.setString(2, p.getMaKhach());

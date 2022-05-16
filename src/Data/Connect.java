@@ -11,9 +11,9 @@ import java.sql.SQLException;
 
 public class Connect {
     private static Connection con;
-    private static String DB_URL = "jdbc:mysql://remotemysql.com:3306/2rWhqjDygH";
-    private static String USER_NAME = "2rWhqjDygH";
-    private static String PASSWORD = "quNIX26vtf";
+    private static String DB_URL = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6492801";
+    private static String USER_NAME = "sql6492801";
+    private static String PASSWORD = "nM1BVn6uQA";
 
     public static Connection getConnect() {
         try {

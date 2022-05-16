@@ -1,5 +1,5 @@
 CREATE TABLE QUAN_TRI(
-    Ma_Admin char(10) NOT NULL,
-    Password varchar(50) NOT NULL,
+  `Ma_Admin` varchar(10) DEFAULT NULL,
+  `Password` smallint(6) DEFAULT NULL,
     PRIMARY KEY (Ma_Admin)
 )
