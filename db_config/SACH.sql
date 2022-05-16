@@ -6,4 +6,4 @@ CREATE TABLE SACH(
   `Gia_tien` mediumint(9) DEFAULT NULL,
   `So_luong` tinyint(4) DEFAULT NULL,
     PRIMARY KEY (Ma_Sach)
-)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4

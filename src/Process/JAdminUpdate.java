@@ -1460,16 +1460,17 @@ public class JAdminUpdate extends javax.swing.JFrame {
 
         private void btTraActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btTraActionPerformed
                 // TODO add your handling code here:
-                JOptionPane.showMessageDialog(null, "Trả sách thành công", "Thông báo", 1);
                 String sql = "UPDATE SACH SET So_luong = ? where Ma_Sach = ?";
                 String sql1 = "SELECT So_luong from SACH where Ma_Sach = '" + this.cbSachMuon.getSelectedItem() + "'";
-                String sql2 = "UPDATE PHIEU_MUON SET NgayTra = (select CURDATE()) where Ma_Phieu_muon = ?";
+                String sql2 = "UPDATE PHIEU_MUON SET Ngaytra = (select CURDATE()) where Ma_Phieu_muon = ?";
                 try {
                         ps2 = Connect.getConnect().prepareStatement(sql2);
                         ps2.setString(1, this.txtMaPhieuMuon.getText());
-                        ps2.executeQuery();
-                        this.btLookMuon.doClick();
+                        System.out.println(this.txtMaPhieuMuon.getText());
+                        ps2.execute();
 
+                        this.btLookMuon.doClick();
+                        ps2.close();
                         ps = Connect.getConnect().prepareStatement(sql);
                         ResultSet rs = UpdateTable.ShowTextField(sql1);
                         ps.setString(2, this.cbSachMuon.getSelectedItem().toString());
@@ -1480,6 +1481,8 @@ public class JAdminUpdate extends javax.swing.JFrame {
                         ps.setInt(1, count + 1);
                         ps.execute();
                         this.btLookMuon.doClick();
+                        ps.close();
+                        JOptionPane.showMessageDialog(null, "Trả sách thành công", "Thông báo", 1);
                 } catch (Exception ex) {
                 }
         }// GEN-LAST:event_btTraActionPerformed

@@ -6,4 +6,4 @@ CREATE TABLE KHACH_HANG(
   `Dia_Chi` varchar(10) DEFAULT NULL,
   `Phone` bigint(20) DEFAULT NULL,
     PRIMARY KEY (Ma_Khach_hang)
-)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
