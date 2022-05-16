@@ -215,7 +215,7 @@ public class Login extends javax.swing.JFrame {
                     jkh.setVisible(true);
                     dispose();
                 } else if (ad != null) {
-                    test t = new test();
+                    Menu t = new Menu();
                     t.setVisible(true);
                     dispose();
                 } else

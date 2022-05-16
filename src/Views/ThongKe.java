@@ -60,7 +60,7 @@ public class ThongKe extends javax.swing.JFrame {
                         .setText("Tổng số phiếu quá hạn là: " + Integer.toString(rs5.getInt("phieumuon")));
 
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
         ResultSet rs = null;
         try {
@@ -76,9 +76,9 @@ public class ThongKe extends javax.swing.JFrame {
         this.taBaoCao.append(this.lbTongPhieu.getText() + "\n");
         this.taBaoCao.append(this.lbTongKhachMuon.getText() + "\n");
         this.taBaoCao.append(this.lbTongPhieuQuaHan.getText() + "\n\n");
-        this.taBaoCao.append("| Mã PM    | Mã KH    | Mã sách | Ngày mượn | Hạn trả      |Tiền cọc|Ngày Trả |\n");
-        for (int i = 1; i <= l.size(); i++)
-            this.taBaoCao.append(l.get(1).toString() + "\n");
+        this.taBaoCao.append("| Mã PM    | Mã KH    | Mã sách | Ngày mượn | Hạn trả      |Ngày Trả |\n");
+        for (int i = 0; i < l.size(); i++)
+            this.taBaoCao.append(l.get(i).toString() + "\n");
     }
 
     @SuppressWarnings("unchecked")
@@ -247,7 +247,7 @@ public class ThongKe extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
 
-        test t = new test();
+        Menu t = new Menu();
         t.setVisible(true);
         dispose();
     }

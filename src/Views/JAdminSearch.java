@@ -944,7 +944,7 @@ public class JAdminSearch extends javax.swing.JFrame {
 
         private void btRetActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btRetActionPerformed
                 // TODO add your handling code here:
-                test t = new test();
+                Menu t = new Menu();
                 t.setVisible(true);
                 dispose();
         }// GEN-LAST:event_btRetActionPerformed
