@@ -1466,7 +1466,6 @@ public class JAdminUpdate extends javax.swing.JFrame {
                 try {
                         ps2 = Connect.getConnect().prepareStatement(sql2);
                         ps2.setString(1, this.txtMaPhieuMuon.getText());
-                        System.out.println(this.txtMaPhieuMuon.getText());
                         ps2.execute();
 
                         this.btLookMuon.doClick();
