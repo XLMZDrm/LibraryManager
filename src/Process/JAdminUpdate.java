@@ -27,7 +27,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 public class JAdminUpdate extends javax.swing.JFrame {
-
+        private static String DB_URL = "jdbc:mysql://localhost:3306/qltv";
+        private static String USER_NAME = "root";
+        private static String PASSWORD = "123456";
         SachData sachdata = new SachData();
         KhachHangData khachhangdata = new KhachHangData();
         PhieuMuonData phieumuondata = new PhieuMuonData();
@@ -77,9 +79,7 @@ public class JAdminUpdate extends javax.swing.JFrame {
 
         public void loadsach() {
                 try {
-                        Connection con = DriverManager.getConnection(
-                                        "jdbc:sqlserver://localhost:1433;databaseName=QLTvien", "sa",
-                                        "123456");
+                        Connection con = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
                         Statement stm = con.createStatement();
                         ResultSet rs = stm
                                         .executeQuery("SELECT * FROM SACH where Ma_sach= '"
@@ -97,9 +97,7 @@ public class JAdminUpdate extends javax.swing.JFrame {
 
         public void loadcb() {
                 try {
-                        Connection con = DriverManager.getConnection(
-                                        "jdbc:sqlserver://localhost:1433;databaseName=QLTvien", "sa",
-                                        "123456");
+                        Connection con = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
                         Statement stm = con.createStatement();
                         ResultSet rs = stm.executeQuery("SELECT * FROM KHACH_HANG");
                         while (rs.next()) {
@@ -113,13 +111,11 @@ public class JAdminUpdate extends javax.swing.JFrame {
 
         public void loadcbsach() {
                 try {
-                        Connection con = DriverManager.getConnection(
-                                        "jdbc:sqlserver://localhost:1433;databaseName=QLTvien", "sa",
-                                        "123456");
+                        Connection con = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
                         Statement stm = con.createStatement();
-                        ResultSet rs = stm.executeQuery("SELECT * FROM Sach");
+                        ResultSet rs = stm.executeQuery("SELECT * FROM SACH");
                         while (rs.next()) {
-                                String masach = rs.getString("Ma_sach");
+                                String masach = rs.getString("Ma_Sach");
                                 cbMaSach.addItem(masach);
                         }
                 } catch (SQLException ex) {
@@ -129,9 +125,7 @@ public class JAdminUpdate extends javax.swing.JFrame {
 
         public void loadcbsachMuon() {
                 try {
-                        Connection con = DriverManager.getConnection(
-                                        "jdbc:sqlserver://localhost:1433;databaseName=QLTvien", "sa",
-                                        "123456");
+                        Connection con = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
                         Statement stm = con.createStatement();
                         ResultSet rs = stm.executeQuery("SELECT * FROM Sach");
                         while (rs.next()) {
@@ -1361,9 +1355,7 @@ public class JAdminUpdate extends javax.swing.JFrame {
         private void btAddPhieuActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btAddPhieuActionPerformed
 
                 try {
-                        Connection con = DriverManager.getConnection(
-                                        "jdbc:sqlserver://localhost:1433;databaseName=QLTvien", "sa",
-                                        "123456");
+                        Connection con = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
                         Statement stm = con.createStatement();
                         ResultSet rs = stm
                                         .executeQuery("SELECT * FROM SACH where Ma_sach= '"

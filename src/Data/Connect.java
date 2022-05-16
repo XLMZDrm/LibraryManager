@@ -11,9 +11,9 @@ import java.sql.SQLException;
 
 public class Connect {
     private static Connection con;
-    private static String DB_URL = "jdbc:mysql://bfdyllagpx9xmspozzom-mysql.services.clever-cloud.com:3306/bfdyllagpx9xmspozzom";
-    private static String USER_NAME = "uihxw415jvbmmula";
-    private static String PASSWORD = "yen6f9KlpbvG7Pr7Zcy2";
+    private static String DB_URL = "jdbc:mysql://localhost:3306/qltv";
+    private static String USER_NAME = "root";
+    private static String PASSWORD = "123456";
 
     public static Connection getConnect() {
         try {
