@@ -26,7 +26,6 @@ public class AdminData {
                 ad = new Admin();
                 // kh.setMaKH(rs.getString("Ma_Khach_hang"));
                 // kh.setPass(rs.getString("Password"));
-
             }
         } catch (Exception e) {
             return ad = null;

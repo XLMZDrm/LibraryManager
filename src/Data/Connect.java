@@ -11,15 +11,17 @@ import java.sql.SQLException;
 
 public class Connect {
     private static Connection con;
+    private static String DB_URL = "jdbc:mysql://bfdyllagpx9xmspozzom-mysql.services.clever-cloud.com:3306/bfdyllagpx9xmspozzom";
+    private static String USER_NAME = "uihxw415jvbmmula";
+    private static String PASSWORD = "yen6f9KlpbvG7Pr7Zcy2";
 
     public static Connection getConnect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(
-                    "jdbc:sqlserver://bfdyllagpx9xmspozzom-mysql.services.clever-cloud.com;databaseName=bfdyllagpx9xmspozzom;Username=uihxw415jvbmmula;Password = yen6f9KlpbvG7Pr7Zcy2");
-
+            con = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
+            System.out.println("connect successfully!");
         } catch (Exception e) {
-            System.out.println("");
+            System.out.println("connect failure!");
         }
         return con;
     }
