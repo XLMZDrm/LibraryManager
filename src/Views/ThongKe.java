@@ -15,7 +15,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
-import Controller.Connect;
+import Controller.ConnectDatabase;
 import net.proteanit.sql.DbUtils;
 
 public class ThongKe extends javax.swing.JFrame {
@@ -30,7 +30,7 @@ public class ThongKe extends javax.swing.JFrame {
         return jButton2;
     }
 
-    public static Connection con = Connect.getConnect();
+    public static Connection con = ConnectDatabase.getConnect();
 
     public ThongKe() {
         initComponents();

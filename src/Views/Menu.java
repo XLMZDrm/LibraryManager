@@ -121,7 +121,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
 
-        JAdminUpdate jau = new JAdminUpdate();
+        AdminUpdate jau = new AdminUpdate();
         jau.setVisible(true);
         dispose();
     }
@@ -144,7 +144,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void btSearchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btSearchActionPerformed
 
-        JAdminSearch jas = new JAdminSearch();
+        AdminSearch jas = new AdminSearch();
         jas.setVisible(true);
         dispose();
     }

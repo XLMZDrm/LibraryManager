@@ -20,7 +20,8 @@ public class AdminData {
     public Admin dangNhap(String taiKhoan, String pass) {
         Admin ad = null;
         try {
-            ps = Connect.getConnect().prepareStatement("SELECT * FROM QUAN_TRI where Ma_Admin = ? and Password=?");
+            ps = ConnectDatabase.getConnect()
+                    .prepareStatement("SELECT * FROM QUAN_TRI where Ma_Admin = ? and Password=?");
             ps.setString(1, taiKhoan);
             ps.setString(2, pass);
             rs = ps.executeQuery();
@@ -37,7 +38,7 @@ public class AdminData {
 
     public static ResultSet showTextfield(String sql) {
         try {
-            ps = Connect.getConnect().prepareStatement(sql);
+            ps = ConnectDatabase.getConnect().prepareStatement(sql);
             return ps.executeQuery();
         } catch (Exception e) {
             return null;
@@ -47,7 +48,7 @@ public class AdminData {
 
     public boolean UpdateAdmin(Admin ad) {
         try {
-            ps = Connect.getConnect().prepareStatement("UPDATE QUAN_TRI SET Password = ? where Ma_Admin = ?");
+            ps = ConnectDatabase.getConnect().prepareStatement("UPDATE QUAN_TRI SET Password = ? where Ma_Admin = ?");
             ps.setString(2, ad.getMaAdmin());
             ps.setString(1, ad.getPassword());
             return ps.executeUpdate() > 0;
@@ -58,7 +59,7 @@ public class AdminData {
 
     public boolean DeleteAdmin(String maAd) {
         try {
-            ps = Connect.getConnect().prepareStatement("DELETE FROM QUAN_TRI WHERE Ma_Admin = ?");
+            ps = ConnectDatabase.getConnect().prepareStatement("DELETE FROM QUAN_TRI WHERE Ma_Admin = ?");
             ps.setString(1, maAd);
             return ps.executeUpdate() > 0;
         } catch (Exception e) {

@@ -7,13 +7,13 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
-import Controller.Connect;
+import Controller.ConnectDatabase;
 import net.proteanit.sql.DbUtils;
 
 public class UpdateTable {
     public static PreparedStatement ps = null;
     public static ResultSet rs = null;
-    public static Connection con = Connect.getConnect();
+    public static Connection con = ConnectDatabase.getConnect();
 
     public static void LoadData(String sql, JTable tb) {
         try {

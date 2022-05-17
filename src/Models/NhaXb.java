@@ -7,16 +7,16 @@ package Models;
 
 import java.sql.Date;
 
-public class NhaXb {
+public class NhaXB {
 
     private String maNXB;
     private String tenNXB;
 
-    public NhaXb() {
+    public NhaXB() {
 
     }
 
-    public NhaXb(String maNXB, String tenNXB) {
+    public NhaXB(String maNXB, String tenNXB) {
         this.maNXB = maNXB;
         this.tenNXB = tenNXB;
     }

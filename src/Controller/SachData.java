@@ -18,7 +18,7 @@ public class SachData {
 
     public static ResultSet showTextfield(String sql) {
         try {
-            ps = Connect.getConnect().prepareStatement(sql);
+            ps = ConnectDatabase.getConnect().prepareStatement(sql);
             return ps.executeQuery();
         } catch (Exception e) {
             return null;
@@ -28,7 +28,7 @@ public class SachData {
     public static void InsertSach(Sach s) {
         String sql = "insert into SACH values(?,?,?,?,?,?)";
         try {
-            ps = Connect.getConnect().prepareStatement(sql);
+            ps = ConnectDatabase.getConnect().prepareStatement(sql);
             ps.setString(1, s.getMaSach());
             ps.setString(2, s.getTenSach());
             ps.setString(3, s.getTenTacGia());
@@ -44,7 +44,7 @@ public class SachData {
 
     public boolean UpdateSach(Sach s) {
         try {
-            ps = Connect.getConnect().prepareStatement("UPDATE SACH SET  Ten_Sach = ?, Ten_Tac_gia = ?,"
+            ps = ConnectDatabase.getConnect().prepareStatement("UPDATE SACH SET  Ten_Sach = ?, Ten_Tac_gia = ?,"
                     + "Nha_xb = ?, Gia_tien = ?, So_luong = ? where Ma_Sach = ?");
             ps.setString(6, s.getMaSach());
             ps.setString(1, s.getTenSach());
@@ -60,7 +60,7 @@ public class SachData {
 
     public boolean DeleteSach(String ms) {
         try {
-            ps = Connect.getConnect().prepareStatement("DELETE FROM SACH WHERE Ma_Sach = ?");
+            ps = ConnectDatabase.getConnect().prepareStatement("DELETE FROM SACH WHERE Ma_Sach = ?");
             ps.setString(1, ms);
             return ps.executeUpdate() > 0;
         } catch (Exception e) {
