@@ -76,4 +76,11 @@ public class KhachHang {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    @Override
+    public String toString() {
+        return "KhachHang [birth=" + birth + ", diaChi=" + diaChi + ", maKhachHang=" + maKhachHang + ", name=" + name
+                + ", password=" + password + ", phone=" + phone + "]";
+    }
+
 }

@@ -50,6 +50,7 @@ public class KhachHangData {
     public static void InsertKhachHang(KhachHang kh) {
         String sql = "insert into KHACH_HANG values(?,?,?,?,?,?)";
         try {
+            System.out.println(kh.toString());
             ps = Connect.getConnect().prepareStatement(sql);
             ps.setString(1, kh.getMaKH());
             ps.setString(2, kh.getPass());
@@ -60,6 +61,7 @@ public class KhachHangData {
             ps.execute();
             JOptionPane.showMessageDialog(null, "Đã thêm khách hàng thành công!", "Thông báo", 1);
         } catch (Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Khách hàng không được thêm", "Thông báo", 1);
         }
     }
