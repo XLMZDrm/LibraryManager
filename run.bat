@@ -1,3 +1,3 @@
 echo running app
-java -jar --enable-preview .\LibraryManagerJavaApp.jar
+java -jar .\LibraryManagerJavaApp.jar
 echo closed app
