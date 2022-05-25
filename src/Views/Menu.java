@@ -29,13 +29,13 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        btThongKe.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btThongKe.setText("Thống kê");
-        btThongKe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btThongKeActionPerformed(evt);
-            }
-        });
+        // btThongKe.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        // btThongKe.setText("Thống kê");
+        // btThongKe.addActionListener(new java.awt.event.ActionListener() {
+        // public void actionPerformed(java.awt.event.ActionEvent evt) {
+        // btThongKeActionPerformed(evt);
+        // }
+        // });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 204));
@@ -49,21 +49,21 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        btSearch.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btSearch.setText("Tìm kiếm");
-        btSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btSearchActionPerformed(evt);
-            }
-        });
+        // btSearch.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        // btSearch.setText("Tìm kiếm");
+        // btSearch.addActionListener(new java.awt.event.ActionListener() {
+        // public void actionPerformed(java.awt.event.ActionEvent evt) {
+        // btSearchActionPerformed(evt);
+        // }
+        // });
 
-        btBaoCao.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btBaoCao.setText("Báo Cáo");
-        btBaoCao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btBaoCaoActionPerformed(evt);
-            }
-        });
+        // btBaoCao.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        // btBaoCao.setText("Báo Cáo");
+        // btBaoCao.addActionListener(new java.awt.event.ActionListener() {
+        // public void actionPerformed(java.awt.event.ActionEvent evt) {
+        // btBaoCaoActionPerformed(evt);
+        // }
+        // });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

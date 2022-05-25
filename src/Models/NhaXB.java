@@ -5,8 +5,6 @@
  */
 package Models;
 
-import java.sql.Date;
-
 public class NhaXB {
 
     private String maNXB;
