@@ -65,14 +65,14 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(rbKhachHang);
-        rbKhachHang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        rbKhachHang.setText("Khách hàng");
-        rbKhachHang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbKhachHangActionPerformed(evt);
-            }
-        });
+        // buttonGroup1.add(rbKhachHang);
+        // rbKhachHang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        // rbKhachHang.setText("Khách hàng");
+        // rbKhachHang.addActionListener(new java.awt.event.ActionListener() {
+        // public void actionPerformed(java.awt.event.ActionEvent evt) {
+        // rbKhachHangActionPerformed(evt);
+        // }
+        // });
 
         btLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btLogin.setText("Đăng nhập");
