@@ -4,7 +4,7 @@ package Views;
 import javax.swing.JOptionPane;
 
 import Controller.AdminData;
-import Controller.ConnectDatabase;
+import Controller.Connect;
 import Controller.KhachHangData;
 import Models.Admin;
 import Models.KhachHang;
@@ -16,7 +16,7 @@ public class Login extends javax.swing.JFrame {
 
     public Login() {
         initComponents();
-        this.lbConnect.setText(ConnectDatabase.testConnect());
+        this.lbConnect.setText(Connect.testConnect());
         this.setLocation(300, 200);
     }
 

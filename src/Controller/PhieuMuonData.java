@@ -7,10 +7,10 @@ package Controller;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import javax.swing.JOptionPane;
 
 import Models.PhieuMuon;
-import Models.Sach;
 
 public class PhieuMuonData {
     public static PreparedStatement ps;
@@ -18,7 +18,7 @@ public class PhieuMuonData {
 
     public static ResultSet showTextfield(String sql) {
         try {
-            ps = ConnectDatabase.getConnect().prepareStatement(sql);
+            ps = Connect.getConnect().prepareStatement(sql);
             return ps.executeQuery();
         } catch (Exception e) {
             return null;
@@ -29,7 +29,7 @@ public class PhieuMuonData {
         String sql = "insert into PHIEU_MUON values(?,?,?,?,?,?)";
         try {
             System.out.println(p.toString());
-            ps = ConnectDatabase.getConnect().prepareStatement(sql);
+            ps = Connect.getConnect().prepareStatement(sql);
             ps.setString(1, p.getMaMuon());
             ps.setString(2, p.getMaKhach());
             ps.setString(3, p.getSach());
@@ -45,7 +45,7 @@ public class PhieuMuonData {
 
     public boolean UpdatePhieu(PhieuMuon p) {
         try {
-            ps = ConnectDatabase.getConnect().prepareStatement("UPDATE PHIEU_MUON SET  Ma_Khach_hang = ?, Ma_Sach = ?,"
+            ps = Connect.getConnect().prepareStatement("UPDATE PHIEU_MUON SET  Ma_Khach_hang = ?, Ma_Sach = ?,"
                     + "Ngay_muon = ?, Han_tra = ? where Ma_Phieu_muon = ?");
             ps.setString(5, p.getMaMuon());
             ps.setString(1, p.getMaKhach());
@@ -60,7 +60,7 @@ public class PhieuMuonData {
 
     public boolean DeletePhieu(String ms) {
         try {
-            ps = ConnectDatabase.getConnect().prepareStatement("DELETE FROM PHIEU_MUON WHERE Ma_Phieu_muon = ?");
+            ps = Connect.getConnect().prepareStatement("DELETE FROM PHIEU_MUON WHERE Ma_Phieu_muon = ?");
             ps.setString(1, ms);
             return ps.executeUpdate() > 0;
         } catch (Exception e) {

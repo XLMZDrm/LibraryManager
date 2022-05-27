@@ -15,15 +15,15 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
-import Controller.ConnectDatabase;
+import Controller.Connect;
 import Controller.KhachHangData;
 import Controller.PhieuMuonData;
 import Controller.SachData;
 import Models.KhachHang;
-import Models.NhaXB;
 import Models.PhieuMuon;
 import Models.Sach;
 
@@ -1392,7 +1392,7 @@ public class AdminUpdate extends javax.swing.JFrame {
                 String sql = "UPDATE SACH SET So_luong = ? where Ma_Sach = ?";
                 String sql1 = "SELECT So_luong from SACH where Ma_Sach = '" + this.cbSachMuon.getSelectedItem() + "'";
                 try {
-                        ps = ConnectDatabase.getConnect().prepareStatement(sql);
+                        ps = Connect.getConnect().prepareStatement(sql);
                         ResultSet rs = UpdateTable.ShowTextField(sql1);
                         ps.setString(2, this.cbSachMuon.getSelectedItem().toString());
                         int count = 0;
@@ -1465,13 +1465,13 @@ public class AdminUpdate extends javax.swing.JFrame {
                 String sql1 = "SELECT So_luong from SACH where Ma_Sach = '" + this.cbSachMuon.getSelectedItem() + "'";
                 String sql2 = "UPDATE PHIEU_MUON SET Ngaytra = (select CURDATE()) where Ma_Phieu_muon = ?";
                 try {
-                        ps2 = ConnectDatabase.getConnect().prepareStatement(sql2);
+                        ps2 = Connect.getConnect().prepareStatement(sql2);
                         ps2.setString(1, this.txtMaPhieuMuon.getText());
                         ps2.execute();
 
                         this.btLookMuon.doClick();
                         ps2.close();
-                        ps = ConnectDatabase.getConnect().prepareStatement(sql);
+                        ps = Connect.getConnect().prepareStatement(sql);
                         ResultSet rs = UpdateTable.ShowTextField(sql1);
                         ps.setString(2, this.cbSachMuon.getSelectedItem().toString());
                         int count = 0;

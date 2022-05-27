@@ -7,9 +7,8 @@ package Controller;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
-public class ConnectDatabase {
+public class Connect {
     private static Connection con;
     private static String DB_URL = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6492801";
     private static String USER_NAME = "sql6492801";
@@ -28,7 +27,7 @@ public class ConnectDatabase {
 
     public static String testConnect() {
         try {
-            con = ConnectDatabase.getConnect();
+            con = Connect.getConnect();
             return "";
         } catch (Exception e) {
             return "";

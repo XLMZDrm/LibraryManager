@@ -10,12 +10,13 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
-import Controller.ConnectDatabase;
+import Controller.Connect;
 import net.proteanit.sql.DbUtils;
 
 public class ThongKe extends javax.swing.JFrame {
@@ -30,7 +31,7 @@ public class ThongKe extends javax.swing.JFrame {
         return jButton2;
     }
 
-    public static Connection con = ConnectDatabase.getConnect();
+    public static Connection con = Connect.getConnect();
 
     public ThongKe() {
         initComponents();
