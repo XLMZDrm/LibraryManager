@@ -41,10 +41,10 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setForeground(new java.awt.Color(51, 255, 51));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18));
         jLabel1.setText("Tài khoản:");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18));
         jLabel2.setText("Mật khẩu:");
 
         txtTaiKhoan.setEnabled(false);
@@ -57,7 +57,7 @@ public class Login extends javax.swing.JFrame {
         txtMatKhau.setEnabled(false);
 
         buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18));
         jRadioButton1.setText("Admin");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,16 +65,16 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        // buttonGroup1.add(rbKhachHang);
-        // rbKhachHang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        // rbKhachHang.setText("Khách hàng");
-        // rbKhachHang.addActionListener(new java.awt.event.ActionListener() {
-        // public void actionPerformed(java.awt.event.ActionEvent evt) {
-        // rbKhachHangActionPerformed(evt);
-        // }
-        // });
+        buttonGroup1.add(rbKhachHang);
+        rbKhachHang.setFont(new java.awt.Font("Tahoma", 0, 18));
+        rbKhachHang.setText("Khách hàng");
+        rbKhachHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbKhachHangActionPerformed(evt);
+            }
+        });
 
-        btLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btLogin.setFont(new java.awt.Font("Tahoma", 0, 18));
         btLogin.setText("Đăng nhập");
         btLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +82,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        btExit.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btExit.setFont(new java.awt.Font("Tahoma", 0, 18));
         btExit.setText("Thoát");
         btExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +90,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18));
         jLabel3.setForeground(new java.awt.Color(255, 51, 0));
         jLabel3.setText("Quản lý thư viện");
 
