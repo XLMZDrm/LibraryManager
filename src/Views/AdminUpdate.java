@@ -1237,8 +1237,7 @@ public class AdminUpdate extends javax.swing.JFrame {
                                         + this.txtLookKhach.getText() + "%' "
                                         + "or Ten_Khach_hang like N'%" + this.txtLookKhach.getText()
                                         + "%' or Phone like '%"
-                                        + this.txtLookKhach.getText() + "%'"
-                                        + "or Mail like N'%" + this.txtLookKhach.getText() + "%'";
+                                        + this.txtLookKhach.getText() + "%'";
                         UpdateTable.LoadData(sql1, tbKhach);
                 }
         }// GEN-LAST:event_btLookKhachActionPerformed
